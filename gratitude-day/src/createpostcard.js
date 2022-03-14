@@ -24,7 +24,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const CreatePostCard = () => {
   //------------------------------------------------------------------------variables-----------------------------------------------------------//
   const [images, setImages] = useState([]);
-  const maxNumber = 1;
+  const maxNumber = 10;
   const [email, setEmail] = useState("");
   const [body, setBody] = useState("");
   const [open, setOpen] = useState(false);
@@ -84,7 +84,8 @@ const CreatePostCard = () => {
           imageList,
           onImageUpload,
           onImageRemoveAll,
-
+          onImageUpdate,
+          onImageRemove,
           isDragging,
           dragProps,
         }) => (
@@ -94,6 +95,7 @@ const CreatePostCard = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              p:2,
             }}
           >
             <div>
@@ -102,10 +104,20 @@ const CreatePostCard = () => {
                 onClick={onImageUpload}
                 {...dragProps}
               >
-                Click or Drop here
+                Add multiple images
               </Button>
               &nbsp;
-              <Button onClick={onImageRemoveAll}>Remove Image</Button>
+              <Button onClick={onImageRemoveAll}>Remove All</Button>
+              {imageList.map((image, index) => (
+              <Grid container spacing={2} key={index}>
+                <Grid item xs={6}><img src={image.data_url} alt="" width="150" /></Grid>
+                
+                <Grid item xs={4}>
+                  <Button onClick={() => onImageUpdate(index)}>Update</Button>
+                  <Button onClick={() => onImageRemove(index)}>Remove</Button>
+                </Grid>
+              </Grid>
+            ))}
             </div>
           </Box>
         )}
@@ -123,7 +135,7 @@ const CreatePostCard = () => {
     >
       <div style={{ padding: "50px" }}></div>
       <Grid container justifyContent="space-around" alignItems="flex-start">
-        <Grid item xs={6}>
+        <Grid item md={6} xs={12}>
           <Container component="main" maxWidth="sm">
             <Paper elevation={2}>
               <Box
@@ -202,7 +214,7 @@ const CreatePostCard = () => {
             </Paper>
           </Container>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md ={6}>
           <Box
             sx={{
               p: 2,
@@ -252,7 +264,7 @@ const CreatePostCard = () => {
                   return (
                     <img
                       src={image.data_url}
-                      style={{ maxWidth: "400px" }}
+                      style={{ maxWidth: "400px",padding:"5px" }}
                     ></img>
                   );
                 })}
