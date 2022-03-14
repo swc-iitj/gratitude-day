@@ -29,6 +29,7 @@ const CreatePostCard = () => {
   const [body, setBody] = useState("");
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const [emailOpen,setEmailOpen] = useState(false);
 
   //------------------------------------------------------------------------handle variables-----------------------------------------------------------//
   const handleImageChange = (imageList, _) => {
@@ -46,6 +47,10 @@ const CreatePostCard = () => {
   const handleSubmit = () => {
     if (body.length == 0 && images.length == 0) {
       setOpen(true);
+      return;
+    }
+    if(!email.includes("@")){
+      setEmailOpen(true);
       return;
     }
     const url = images.map((image,_)=>{return(image.data_url)})
@@ -68,6 +73,13 @@ const CreatePostCard = () => {
     }
 
     setOpen(false);
+  };
+  const handleEmailClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setEmailOpen(false);
   };
   //------------------------------------------------------------------------components-----------------------------------------------------------//
 
@@ -206,6 +218,19 @@ const CreatePostCard = () => {
                         onClose={handleClose}
                       >
                         Enter either the message or a photo
+                      </Alert>
+                    </Snackbar>
+                    <Snackbar
+                      open={emailOpen}
+                      autoHideDuration={6000}
+                      onClose={handleEmailClose}
+                    >
+                      <Alert
+                        severity="error"
+                        sx={{ width: "100%" }}
+                        onClose={handleEmailClose}
+                      >
+                      Enter Valid Email
                       </Alert>
                     </Snackbar>
                   </Grid>
