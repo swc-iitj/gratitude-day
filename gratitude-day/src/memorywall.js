@@ -1,9 +1,12 @@
 import React from 'react'
+import './App.css'
+import Gallery from './Gallery';
 
 const Memorywall = () =>{
     return (
         <>
-        <h1>Memorywall</h1> 
+        <h1 style={{textAlign:'center'}}>Memorywall</h1> 
+        <Gallery/>
         </>
     )
 }
