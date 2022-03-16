@@ -5,8 +5,14 @@ import Gallery from './Gallery';
 const Memorywall = () =>{
     return (
         <>
-        <h1 style={{textAlign:'center'}}>Memorywall</h1> 
-        <Gallery/>
+        <div
+            style={{
+            backgroundColor: "#e2cd60",
+            backgroundSize: "100%",
+            }}
+        >
+            <Gallery/>
+        </div>
         </>
     )
 }
