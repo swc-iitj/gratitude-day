@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate,Link} from "react-router-dom";
 import {
   Box,
   Grid,
@@ -9,6 +9,7 @@ import {
   TextField,
   Button,
   Snackbar,
+  Toolbar,AppBar
 } from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
 import topLeftImage from "./Images/border-top 1.png";
@@ -116,7 +117,7 @@ const CreatePostCard = () => {
                 onClick={onImageUpload}
                 {...dragProps}
               >
-                Add multiple images
+                Add multiple Images
               </Button>
               &nbsp;
               <Button onClick={onImageRemoveAll}>Remove All</Button>
@@ -145,6 +146,15 @@ const CreatePostCard = () => {
         backgroundSize: "100%",
       }}
     >
+      <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{color:"white"}}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Navigate
+          </Typography>
+          <Button color="inherit" to="/" component ={Link} >Go back</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
       <div style={{ padding: "50px" }}></div>
       <Grid container justifyContent="space-around" alignItems="flex-start">
         <Grid item md={6} xs={12}>
@@ -167,7 +177,7 @@ const CreatePostCard = () => {
                   spacing={1}
                 >
                   <Grid item>
-                    <Typography variant="h5">Welcome Text</Typography>
+                    <Typography variant="h5">Welcome</Typography>
                   </Grid>
                   <Grid item>
                     <img src={swcLogo} style={{ maxHeight: "80px" }}></img>
@@ -193,7 +203,7 @@ const CreatePostCard = () => {
                   <Grid item>
                     <TextField
                       fullWidth
-                      label="Body"
+                      label="Say something"
                       multiline
                       rows={10}
                       value={body}
