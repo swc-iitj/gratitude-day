@@ -9,8 +9,10 @@ const Gallery= ()=>{
     let data= photos
     const [model, setModel]= useState(false);
     const [tempimgSrc, setTempImgSrc]= useState('');
-    const getImg= (src)=>{
+    const [tempimgCap, setTempImgCap]= useState('');
+    const getImg= (src,cap)=>{
         setTempImgSrc(src);
+        setTempImgCap(cap)
         setModel(true);
     }
     return(
@@ -25,12 +27,15 @@ const Gallery= ()=>{
         {
             <><div className={model ? "model open" : "model"}>
                     <img src={tempimgSrc} />
+                    <div className='Caption'>
+                        tempimgCap
+                    </div>
                     <CloseIcon onClick={() => setModel(false)} />
 
                 </div><div className='gallery'>
                         {data.map((item, index) => {
                             return (
-                                <div className='pics' key={index} onClick={() => getImg(item.src)}>
+                                <div className='pics' key={index} onClick={() => getImg(item.src, item.cap)}>
                                     <img src={item.src} />
                                 </div>
                             );

@@ -81,6 +81,9 @@
     padding: 20px 0 20px;
     margin: 0 auto;
 }
+.model.open.caption{
+    text-decoration-color: aliceblue;
+}
 .model.open svg{
     position: fixed;
     top: 10px;
