@@ -174,21 +174,21 @@ class Form extends Component {
 				<p className="preview-text">
 					For assistance/queries reachout to{" "}
 					<a
-						href="mailto:tawatia.1@iitj.ac.in"
+						href="mailto:raghav.1@iitj.ac.in"
 						target="_blank"
 						rel="noreferrer"
 					>
-						Kunal,
-					</a>{" "}
-					<a href="mailto:jain.38@iitj.ac.in" target="_blank" rel="noreferrer">
-						Darshit,
-					</a>{" "}
-					<a href="mailto:raghav.1@iitj.ac.in" target="_blank" rel="noreferrer">
 						Abhishek,
 					</a>{" "}
+					<a href="mailto:jain.53@iitj.ac.in" target="_blank" rel="noreferrer">
+						Akshat,
+					</a>{" "}
+					<a href="mailto:dutta.4@iitj.ac.in" target="_blank" rel="noreferrer">
+						Jahnab,
+					</a>{" "}
 					and{" "}
-					<a href="mailto:singh.81@iitj.ac.in" target="_blank" rel="noreferrer">
-						Sandesh
+					<a href="mailto:thomas.2@iitj.ac.in" target="_blank" rel="noreferrer">
+						Joel
 					</a>{" "}
 				</p>
 			</>

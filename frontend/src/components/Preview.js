@@ -13,7 +13,7 @@ export default function Preview({ mail, message, images }) {
 						<td class="two-column">
 							<div class="prev-section">
 								<img
-									src="https://i.imgur.com/8P1impU.png"
+									src="https://i.imgur.com/EJLPkd8.png"
 									height=""
 									alt="alt_text"
 									border="0"
@@ -23,12 +23,13 @@ export default function Preview({ mail, message, images }) {
 										fontFamily: "sans-serif",
 										color: "#555555",
 										display: "block",
+										transform: "rotate(90deg)"
 									}}
 								/>
 							</div>
 							<div class="prev-section">
 								<img
-									src="https://i.imgur.com/3aDWXWv.png"
+									src="https://i.imgur.com/JJgRlI0.png"
 									height=""
 									alt="alt_text"
 									border="0"
@@ -38,6 +39,7 @@ export default function Preview({ mail, message, images }) {
 										fontFamily: "sans-serif",
 										color: "#555555",
 										display: "block",
+										marginTop: "25px"
 									}}
 								/>
 							</div>
@@ -70,7 +72,7 @@ export default function Preview({ mail, message, images }) {
 							))}
 							<div>
 								<img
-									src="https://i.imgur.com/Gnotz4l.png"
+									src="https://i.imgur.com/EJLPkd8.png"
 									height=""
 									alt="alt_text"
 									border="0"
@@ -82,6 +84,7 @@ export default function Preview({ mail, message, images }) {
 										display: "block",
 										textAlign: "right",
 										float: "right",
+										transform: "rotate(270deg)"
 									}}
 								/>
 							</div>

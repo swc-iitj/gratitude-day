@@ -19,18 +19,17 @@ const Gallery= ()=>{
         <>
         <div
             style={{
-            backgroundColor: "#e2cd60",
             backgroundSize: "100%",
             }}
         >
         
         {
             <><div className={model ? "model open" : "model"}>
-                    <img src={tempimgSrc} />
+                    <img src={tempimgSrc} style={{margin: "0"}}/>
                     <div className='Caption'>
-                        tempimgCap
+                        <h1 style={{color: "white"}}>{tempimgCap}</h1>
                     </div>
-                    <CloseIcon onClick={() => setModel(false)} />
+                    <CloseIcon onClick={() => setModel(false)} style={{cursor: "pointer"}}/>
 
                 </div><div className='gallery'>
                         {data.map((item, index) => {

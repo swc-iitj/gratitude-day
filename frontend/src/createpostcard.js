@@ -1,10 +1,12 @@
 import "./App.css";
 import Form from "./components/Form";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Gratitude Day</h1>
+			<Navbar />
+			<h1>✍️ Write a Postcard</h1>
 			<Form />
 		</div>
 	);
