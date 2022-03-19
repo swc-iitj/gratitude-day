@@ -32,14 +32,24 @@ const Gallery= ()=>{
                     <CloseIcon onClick={() => setModel(false)} style={{cursor: "pointer"}}/>
 
                 </div><div className='gallery'>
-                        {data.map((item, index) => {
-                            return (
-                                <div className='pics' key={index} onClick={() => getImg(item.src, item.cap)}>
-                                    <img src={item.src} />
-                                </div>
-                            );
-                        })}
-                    </div></>
+                    <div className='container'>
+                        <div className='row'>
+                            {data.map((item, index) => {
+                                return (
+                                    <div className='pics' key={index} onClick={() => getImg(item.src, item.cap)}>
+                                        <div className='imgbox'> 
+                                            <img src={item.src} height='500' width={'500'} />
+                                            <div className='caption'>
+                                                <h1 style={{color: "black"}}>#</h1>
+                                                <h1 style={{color: "black"}}> {item.cap}</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div></>
         }
         </div>
         </>

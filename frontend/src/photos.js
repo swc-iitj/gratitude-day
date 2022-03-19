@@ -2,7 +2,7 @@ export const photos = [
     {
       id:1,
       src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-      cap: "cap1",
+      cap: "Hello this is the first caption welcome to the memorywall",
       width: 4,
       height: 3
     },
