@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from  './Home';
 import Memorywall from './memorywall';
 import {React} from "react";
@@ -8,14 +8,14 @@ const App = () =>  {
  
     return (
      
-      <BrowserRouter>
+      <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="memorywall/" element={<Memorywall />} />
-        <Route path="createPostCard/" element={<CreatePostCard />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="memorywall/" element={<Memorywall />} />
+        <Route exact path="createPostCard/" element={<CreatePostCard />} />
   
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
          
 
       
