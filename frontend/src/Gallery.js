@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { photos } from "./photos";
+import React, { useState,useEffect } from "react";
 import "./gallery.css";
 import CloseIcon from "@material-ui/icons/Close";
-import { Grid } from "@mui/material";
+import GSheetReader from "g-sheets-api";
 
 
 
 const Gallery= ()=>{
-    let data= photos
+    
     const [model, setModel]= useState(false);
     const [tempimgSrc, setTempImgSrc]= useState('');
     const [tempimgCap, setTempImgCap]= useState('');
@@ -16,6 +15,32 @@ const Gallery= ()=>{
         setTempImgCap(cap)
         setModel(true);
     }
+    const [photoData,setPhotoData] = useState([]);
+	let data = photoData;
+
+
+	const options = {
+		apiKey: 'AIzaSyB2XspoxlMj1n0N__mLFsDXIMkO8Ny6fjI',
+		sheetId: '1R5KSpWBfExHabHNEvmZq0LY8FbiOItxkgGWzY1AvqkY',
+		sheetNumber: 1,
+		sheetName: 'Form Responses 1', // if sheetName is supplied, this will take precedence over sheetNumber
+		returnAllResults: true,
+	  }
+	  useEffect(()=>{
+		GSheetReader(options,(results)=>{
+
+			const tempPhotoData = []
+		  results.map((result)=>{
+              var id = result['Add your memory'].replace("https://drive.google.com/open?id=", "");
+              var srclink = "https://drive.google.com/uc?export=download&id=" + id;
+			  const tempDict = {id:0,src:srclink,cap:result['Any caption for your memory (optional)'],width:1,height:1};
+			  tempPhotoData.push(tempDict);
+		  })
+		  setPhotoData(tempPhotoData);
+	  }).catch((err)=>{console.log(err)})
+
+	  },[])
+
     return(
         <>
         <div
