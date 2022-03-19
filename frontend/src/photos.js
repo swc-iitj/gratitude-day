@@ -2,7 +2,7 @@ export const photos = [
     {
       id:1,
       src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-      cap: "cap1",
+      cap:"cap 1",
       width: 4,
       height: 3
     },
