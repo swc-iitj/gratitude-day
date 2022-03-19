@@ -168,8 +168,8 @@ p.center {
 .btn {
 	font-size: 15px;
 	font-weight: 600;
-	background: #81bac6;
-	color: #fff;
+	background: #ffffff;
+	color: rgb(12, 11, 11);
 	text-decoration: none;
 	padding: 9px 16px;
 	border-radius: 28px;

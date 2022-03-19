@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import {Link} from "react-router-dom";
 
 import Preview from "./Preview";
 import axios, { BACKEND } from "../api";
@@ -93,9 +94,13 @@ class Form extends Component {
 		return (
 			<>
 				{completed ? (
+					<div>
 					<p className="preview-text">
 						You have posted your gratitude, leave the rest to us... 🥳
 					</p>
+					<button className="btn" onClick={(e)=>{this.setState({completed:false})}}>Write another one</button>
+					</div>
+	
 				) : (
 					<div className="form-page">
 						<div id="form">
