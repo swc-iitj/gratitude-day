@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import { photos } from "./photos";
-import './gallery.css';
-import CloseIcon from '@material-ui/icons/Close';
+import "./gallery.css";
+import CloseIcon from "@material-ui/icons/Close";
+import { Grid } from "@mui/material";
 
 
 
