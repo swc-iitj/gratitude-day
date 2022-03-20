@@ -1,5 +1,5 @@
 {
-	"homepage": "https://swc-iitj.github.io/gratitude-day",
+	"homepage": ".",
 	"name": "gratitude-day",
 	"version": "0.1.0",
 	"private": true,
@@ -48,7 +48,6 @@
 			"last 1 safari version"
 		]
 	},
-	"homepage": ".",
 	"devDependencies": {
 		"gh-pages": "^3.2.3"
 	}

@@ -2,7 +2,8 @@ import React, { useState,useEffect } from "react";
 import "./gallery.css";
 import CloseIcon from "@material-ui/icons/Close";
 import GSheetReader from "g-sheets-api";
-
+import './photos.js'
+import { photos } from "./photos.js";
 
 
 const Gallery= ()=>{
@@ -16,7 +17,7 @@ const Gallery= ()=>{
         setModel(true);
     }
     const [photoData,setPhotoData] = useState([]);
-	let data = photoData;
+	// let data = photoData;
 
 
 	const options = {
@@ -40,7 +41,7 @@ const Gallery= ()=>{
 	  }).catch((err)=>{console.log(err)})
 
 	  },[])
-
+      let data= photos
     return(
         <>
         <div
