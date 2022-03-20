@@ -141,3 +141,5 @@ MEDIA_URL = '/media/'
 FRONTEND_URL = 'http://'+config('HOST', default='localhost:3000')
 
 CORS_ORIGIN_WHITELIST = ["https://swc-iitj.github.io", "http://localhost:3000"]
+
+CORS_ALLOW_ALL_ORIGINS = True

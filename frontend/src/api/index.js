@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BACKEND = "http://devluplabs.centralindia.cloudapp.azure.com";
+export const BACKEND = "https://swc.prometeo.in";
 
 const instance = axios.create({
 	baseURL: `${BACKEND}/api`,
