@@ -107,3 +107,7 @@
     background-color: black;
     color: antiquewhite;
 }
+
+img {
+    object-fit: cover;
+}
