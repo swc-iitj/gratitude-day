@@ -154,7 +154,7 @@ class Form extends Component {
 							</div>
 							<div className="divider" />
 							<ReCAPTCHA
-								sitekey="6LfJ0WMaAAAAAO9K5Lj8DrYFLfR2bAwav1-w_XQs"
+								sitekey="6Lfvp_QeAAAAAAwLMRygatxPlaU5P_PmpiHmXtKl"
 								onChange={this.recaptcha}
 								ref={this.recaptchaRef}
 							/>
