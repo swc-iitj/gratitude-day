@@ -1,13 +1,12 @@
 import "./App.css";
-import Form from "./components/Form";
+import Closed from "./components/Closed";
 import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<h1>✍️ Write a Postcard</h1>
-			<Form />
+			<Closed />
 		</div>
 	);
 }
